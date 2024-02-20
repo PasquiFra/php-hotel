@@ -46,9 +46,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hotels</title>
 </head>
 <body>
-    
+    <ul>
+        <?php foreach ($hotels as $hotel) : ?>
+        <li>
+            Nome Hotel: <?php echo $hotel['name']?> 
+            Descrizione Hotel: <?php echo  $hotel['description']?>
+            Parcheggio: <?php echo  $hotel['parking']?>
+            Voto: <?php echo  $hotel['vote']?>
+            Distanza dal centro: <?php echo $hotel['distance_to_center']?>   
+        <?php endforeach; ?>
+    </ul>
 </body>
 </html>
